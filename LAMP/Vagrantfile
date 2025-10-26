@@ -1,6 +1,8 @@
 Vagrant.configure("2") do |config|
     # CONFIGAÇÕES GLOBAIS
     config.vm.box = "ubuntu/focal64" # DEFINIÇÃO DE BOX GLOBAL
+
+    config.vbguest.auto_update = false
     
     # PROVISIONAMENTO GLOBAL
     config.vm.provision "shell", inline: <<-SHELL
